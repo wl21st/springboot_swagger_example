@@ -3,11 +3,13 @@ package guru.springframework.services;
 import java.util.List;
 
 public interface CRUDService<T> {
-    List<?> listAll();
 
-    T getById(Integer id);
+  List<?> listAll();
 
-    T saveOrUpdate(T domainObject);
+  T getById(Integer id);
 
-    void delete(Integer id);
+  T saveOrUpdate(T domainObject);
+
+  void delete(Integer id);
+
 }

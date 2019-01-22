@@ -1,73 +1,83 @@
 package guru.springframework.domain;
 
-import io.swagger.annotations.ApiModelProperty;
-
-import javax.persistence.*;
 import java.math.BigDecimal;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Version;
+
+import io.swagger.annotations.ApiModelProperty;
 
 @Entity
 public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @ApiModelProperty(notes = "The database generated product ID")
-    private Integer id;
-    @Version
-    @ApiModelProperty(notes = "The auto-generated version of the product")
-    private Integer version;
-    @ApiModelProperty(notes = "The application-specific product ID")
-    private String productId;
-    @ApiModelProperty(notes = "The product description")
-    private String description;
-    @ApiModelProperty(notes = "The image URL of the product")
-    private String imageUrl;
-    @ApiModelProperty(notes = "The price of the product", required = true)
-    private BigDecimal price;
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  @ApiModelProperty(notes = "The database generated product ID")
+  private Integer id;
 
-    public String getDescription() {
-        return description;
-    }
+  @Version
+  @ApiModelProperty(notes = "The auto-generated version of the product")
+  private Integer version;
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  @ApiModelProperty(notes = "The application-specific product ID")
+  private String productId;
 
-    public Integer getVersion() {
-        return version;
-    }
+  @ApiModelProperty(notes = "The product description")
+  private String description;
 
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
+  @ApiModelProperty(notes = "The image URL of the product")
+  private String imageUrl;
 
-    public Integer getId() {
-        return id;
-    }
+  @ApiModelProperty(notes = "The price of the product", required = true)
+  private BigDecimal price;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public String getDescription() {
+    return description;
+  }
 
-    public String getProductId() {
-        return productId;
-    }
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
-    }
+  public Integer getVersion() {
+    return version;
+  }
 
-    public String getImageUrl() {
-        return imageUrl;
-    }
+  public void setVersion(Integer version) {
+    this.version = version;
+  }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
+  public Integer getId() {
+    return id;
+  }
 
-    public BigDecimal getPrice() {
-        return price;
-    }
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
-    }
+  public String getProductId() {
+    return productId;
+  }
+
+  public void setProductId(String productId) {
+    this.productId = productId;
+  }
+
+  public String getImageUrl() {
+    return imageUrl;
+  }
+
+  public void setImageUrl(String imageUrl) {
+    this.imageUrl = imageUrl;
+  }
+
+  public BigDecimal getPrice() {
+    return price;
+  }
+
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
 }

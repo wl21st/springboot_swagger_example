@@ -1,14 +1,15 @@
 package guru.springframework.services;
 
-
 import guru.springframework.domain.Product;
 
 public interface ProductService {
-    Iterable<Product> listAllProducts();
 
-    Product getProductById(Integer id);
+  Iterable<Product> listAllProducts();
 
-    Product saveProduct(Product product);
+  Product getProductById(Integer id);
 
-    void deleteProduct(Integer id);
+  Product saveProduct(Product product);
+
+  void deleteProduct(Integer id);
+
 }
